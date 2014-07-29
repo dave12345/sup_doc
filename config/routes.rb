@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
+  get 'patient_dash'         => 'temp_pages#patient_dash'
+  get 'doctor_dash'          => 'temp_pages#doctor_dash'
+  get 'patient_profile'      => 'temp_pages#patient_profile'
+  get 'doctor_profile'       => 'temp_pages#doctor_profile'
+  get 'patient_waiting_room' => 'temp_pages#patient_waiting_room'
+  get 'doctor_waiting_room'  => 'temp_pages#doctor_waiting_room'
+  get 'patient_webchat'      => 'temp_pages#patient_webchat'
+  get 'doctor_webchat'       => 'temp_pages#doctor_webchat'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'temp_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
