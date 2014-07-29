@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SupDocApp</title>
+  <title>Sup Doc</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <ul id="nav-bar">
+    <li><%= link_to "Landing Page", root_path %></li>
+    <li><%= link_to "Patient Dash", patient_dash_path %></li>
+    <li><%= link_to "Doctor Dash", doctor_dash_path %></li>
+    <li><%= link_to "Patient Profile", patient_profile_path %></li>
+    <li><%= link_to "Doctor Profile", doctor_profile_path %></li>
+    <li><%= link_to "Patient Waiting Room", patient_waiting_room_path %></li>
+    <li><%= link_to "Doctor Waiting Room", doctor_waiting_room_path %></li>
+    <li><%= link_to "Patient Webchat", patient_webchat_path %></li>
+    <li><%= link_to "Doctor Webchat", doctor_webchat_path %></li>
+  </ul>
 
 <%= yield %>
 
