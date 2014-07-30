@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'patient_set_appointment'=> 'temp_pages#patient_set_appointment'
   get 'patient_profile'        => 'temp_pages#patient_profile'
   get 'doctor_profile'         => 'temp_pages#doctor_profile'
+  get 'edit_patient_profile'   => 'temp_pages#edit_patient_profile'
+  get 'edit_doctor_profile'    => 'temp_pages#edit_doctor_profile'
   get 'patient_waiting_room'   => 'temp_pages#patient_waiting_room'
   get 'doctor_waiting_room'    => 'temp_pages#doctor_waiting_room'
   get 'patient_webchat'        => 'temp_pages#patient_webchat'
