@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  devise_for :doctors
   root 'patients#patient_dash'
   devise_for :patients
   
