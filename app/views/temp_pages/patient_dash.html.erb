@@ -1,10 +1,21 @@
+
+<div class="row">
+  <div class="small-4 columns right">
+    <%= link_to "Sign Out", root_path %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-4 columns right">
+    <%= link_to "Update Profile", edit_patient_profile_path %>
+  </div>
+</div>
+
 <div class="row">
   <div class="small-6 columns">
     <h2>Patient Dashboard</h2>
     <p>See a doctor immediately, or find a specialist and set up an appointment!</p>
   </div>
 </div>
-
 
 <div class="row">
   <div class="small-5 columns">
@@ -19,13 +30,8 @@
 </div>
 <div class="row">
   <div class="small-4 columns">
-    <%= link_to "Make An Appointment", patient_set_appointment_path, class: "button radius" %>
+    <%= link_to "Book An Appointment", patient_set_appointment_path, class: "button radius" %>
   </div>
 </div>
 
 
-<div class="row">
-  <div class="small-4 columns right">
-    <%= link_to "Update Profile", edit_patient_profile_path, class: "tiny button radius" %>
-  </div>
-</div>
