@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  def index
+  def patient_dash
   end
 
   def new

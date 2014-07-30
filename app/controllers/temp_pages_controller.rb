@@ -5,8 +5,8 @@ class TempPagesController < ApplicationController
   def doctor_dash    
   end
 
-  def patient_dash    
-  end
+  # def patient_dash    
+  # end
 
   def patient_set_appointment    
   end

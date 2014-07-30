@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'patients#patient_dash'
   devise_for :patients
   
-  get 'patient_dash'           => 'temp_pages#patient_dash'
+  # get 'patient_dash'           => 'temp_pages#patient_dash'
   get 'doctor_dash'            => 'temp_pages#doctor_dash'
   get 'patient_set_appointment'=> 'temp_pages#patient_set_appointment'
   get 'patient_profile'        => 'temp_pages#patient_profile'
