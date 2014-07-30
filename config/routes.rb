@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'doctors/doctor_dash'
+
   devise_for :doctors
   root 'patients#patient_dash'
   devise_for :patients
