@@ -12,8 +12,17 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
  
  #nav-bar {
-  font-family: arial;
+  list-style-type: none;
+  font-size: 14px;
+}
+
+#nav-bar li {
+  display: inline;
+  border-left: 1px solid black;
+  padding: 5px;
 }

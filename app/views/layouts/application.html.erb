@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sup Doc</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
   <ul id="nav-bar">
     <li><%= link_to "Landing Page", root_path %></li>
     <li><%= link_to "Patient Dash", patient_dash_path %></li>
     <li><%= link_to "Doctor Dash", doctor_dash_path %></li>
+    <li><%= link_to "Patient Set Appointment", patient_set_appointment_path %></li>
     <li><%= link_to "Patient Profile", patient_profile_path %></li>
     <li><%= link_to "Doctor Profile", doctor_profile_path %></li>
     <li><%= link_to "Patient Waiting Room", patient_waiting_room_path %></li>
@@ -20,7 +26,7 @@
     <li><%= link_to "Doctor Webchat", doctor_webchat_path %></li>
   </ul>
 
-<%= yield %>
-
+  <%= yield %>
+  <%= javascript_include_tag "application" %>
 </body>
 </html>
