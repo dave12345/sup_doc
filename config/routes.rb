@@ -1,18 +1,7 @@
 Rails.application.routes.draw do
-  get 'patients/index'
 
-  get 'patients/new'
 
-  get 'patients/create'
-
-  get 'patients/show'
-
-  get 'patients/edit'
-
-  get 'patients/update'
-
-  get 'patients/destroy'
-
+  root 'patients#patient_dash'
   devise_for :patients
   
   get 'patient_dash'           => 'temp_pages#patient_dash'
@@ -31,7 +20,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'temp_pages#home'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
