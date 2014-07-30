@@ -1,5 +1,20 @@
 Rails.application.routes.draw do
+  get 'patients/index'
+
+  get 'patients/new'
+
+  get 'patients/create'
+
+  get 'patients/show'
+
+  get 'patients/edit'
+
+  get 'patients/update'
+
+  get 'patients/destroy'
+
   devise_for :patients
+  
   get 'patient_dash'           => 'temp_pages#patient_dash'
   get 'doctor_dash'            => 'temp_pages#doctor_dash'
   get 'patient_set_appointment'=> 'temp_pages#patient_set_appointment'
