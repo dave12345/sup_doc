@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  resources :health_forms
 
   devise_for :doctors
   root 'patients#patient_dash'

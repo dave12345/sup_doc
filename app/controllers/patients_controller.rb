@@ -9,13 +9,11 @@ class PatientsController < ApplicationController
     # @patient = Patient.find(:id)
   end
 
-  def patient_set_appointment    
+  def patient_set_appointment
   end
 
   def patient_waiting_room
-  end
-
-  def patient_waiting_room
+    # @health_form = HealthForm.new
   end
 
   def patient_webchat
