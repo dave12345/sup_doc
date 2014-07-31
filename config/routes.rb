@@ -7,16 +7,17 @@ Rails.application.routes.draw do
   devise_for :patients
   
   # get 'patient_dash'           => 'temp_pages#patient_dash'
-  get 'doctor_dash'            => 'temp_pages#doctor_dash'
+  get 'doctor_dash'            => 'doctors#doctor_dash'
   get 'patient_set_appointment'=> 'patients#patient_set_appointment'
+  get 'doctor_view_appointment'=> 'doctors#doctor_view_appointment'
   get 'patient_profile'        => 'patients#patient_profile'
-  get 'doctor_profile'         => 'temp_pages#doctor_profile'
+  get 'doctor_profile'         => 'doctors#doctor_profile'
   get 'patient_edit_profile'   => 'patients#patient_edit_profile'
-  get 'edit_doctor_profile'    => 'temp_pages#edit_doctor_profile'
+  get 'edit_doctor_profile'    => 'doctors#doctor_edit_profile'
   get 'patient_waiting_room'   => 'patients#patient_waiting_room'
-  get 'doctor_waiting_room'    => 'temp_pages#doctor_waiting_room'
+  get 'doctor_waiting_room'    => 'doctors#doctor_waiting_room'
   get 'patient_webchat'        => 'patients#patient_webchat'
-  get 'doctor_webchat'         => 'temp_pages#doctor_webchat'
+  get 'doctor_webchat'         => 'doctors#doctor_webchat'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
