@@ -1,7 +1,8 @@
 
+
 <div class="row">
   <div class="small-4 columns right">
-    <%= link_to "Sign Out", root_path %>
+    <%= link_to "Sign Out", destroy_patient_session_path, :method => 'delete' %>
   </div>
 </div>
 <div class="row">
@@ -10,6 +11,11 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="small-4 columns">
+    <p>Welcome, <%= @patient.first_name %>!</p>
+  </div>
+</div>
 <div class="row">
   <div class="small-6 columns">
     <h2>Patient Dashboard</h2>

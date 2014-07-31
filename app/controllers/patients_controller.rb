@@ -1,14 +1,18 @@
 class PatientsController < ApplicationController
+  # before_action :authenticate_user!
+
   def patient_dash
+    @patient = current_patient
+  end
+
+  def patient_profile
+    # @patient = Patient.find(:id)
   end
 
   def patient_set_appointment    
   end
 
   def patient_waiting_room
-  end
-
-  def patient_profile
   end
 
   def patient_waiting_room
