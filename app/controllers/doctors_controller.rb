@@ -1,4 +1,6 @@
 class DoctorsController < ApplicationController
+  before_action :authenticate_doctor!
+  
   def doctor_dash
     @doctor = current_doctor
   end

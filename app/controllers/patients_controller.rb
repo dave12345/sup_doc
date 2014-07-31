@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_patient!
 
   def patient_dash
     @patient = current_patient
