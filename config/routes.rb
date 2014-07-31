@@ -3,8 +3,20 @@ Rails.application.routes.draw do
   resources :health_forms
 
   devise_for :doctors
-  root 'patients#patient_dash'
   devise_for :patients
+
+  # root :to => 'patients#patient_dash'
+
+  # authenticated :patient do
+  #   root :to => "patients#patient_dash", as: :patient_root
+  # end
+
+  # authenticated :doctor do
+  #   root :to => "doctors#doctor_dash", as: :doctor_root
+  # end
+
+  # root :to => ''
+
   
   # get 'patient_dash'           => 'temp_pages#patient_dash'
   get 'doctor_dash'            => 'doctors#doctor_dash'

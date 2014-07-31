@@ -1,5 +1,6 @@
 class DoctorsController < ApplicationController
   def doctor_dash
+    @doctor = current_doctor
   end
 
   def doctor_profile
