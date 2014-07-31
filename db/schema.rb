@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731074740) do
+ActiveRecord::Schema.define(version: 20140731203036) do
 
   create_table "doctors", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -71,5 +71,10 @@ ActiveRecord::Schema.define(version: 20140731074740) do
 
   add_index "patients", ["email"], name: "index_patients_on_email", unique: true
   add_index "patients", ["reset_password_token"], name: "index_patients_on_reset_password_token", unique: true
+
+  create_table "static_pages", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
