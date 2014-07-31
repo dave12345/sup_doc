@@ -1,6 +1,6 @@
 <div class="row">
   <div class="small-4 columns">
-    <h2>Waiting Room</h2>
+    <h2 class="page-title">Waiting Room</h2>
   </div>
 </div>
 <div class="row">
@@ -9,73 +9,4 @@
   </div>
 </div>
 
-
-<%= form_for @health_form do |f| %>
-
-<div class="row">
-  <div class="small-4 columns">
-    First Name:<%= f.text_field :first_name %>
-  </div>
-  <div class="small-4 columns left">
-    Last Name:<%= f.text_field :last_name %>
-  </div>
-  <div class="small-1 columns left">
-    Age:<%= f.text_field :age %>
-  </div>
-</div>
-
-<div class="row">
-  <div class="small-4 columns">
-    Primary Telephone Number:<%= f.text_field :telephone %>
-  </div>
-  <div class="small-4 columns left">
-    Do you smoke? (Yes/No):<%= f.text_field :smoke %>
-  </div>
-</div>
-
-<div class="row">
-  <div class="small-4 columns">
-    Are you currently taking any prescription drugs? (List):<%= f.text_area :prescription_drugs %>
-  </div>
-  <div class="small-4 columns left">
-    <br>Insurance Provider:<%= f.text_field :insurance_provider %>
-  </div>
-</div>
-
-<div class="row">
-  <div class="small-4 columns">
-    Any chronic illness or serious medical condition?:<%= f.text_area :medical_condition %>
-  </div>
-  <div class="small-4 columns left">
-    Any surgeries in the past? If yes, please state briefly:<%= f.text_area :surgery %>
-  </div>
-</div>
-
-<div class="row">
-  <div class="small-8 columns">
-    What is the reason for your visit?:<%= f.text_area :reason_for_visit %>
-  </div>
-</div>
-<div class="row">
-  <div class="small-8 columns">
-    Please list symptoms: <%= f.text_area :symptoms %>
-  </div>
-</div>
-
-<div class="row">
-  <div class="small-6 columns">
-    Type full name and date here to acknowledge full agreement to terms and conditions of Sup Doc: <%= f.text_field :signature %>
-  </div>
-  <div class="small-2 columns left">
-    <br>Today's Date: <%= f.text_field :date %>
-  </div>
-</div>
-
-<div class="row">
-  <div class="small-8 columns">
-    <%= f.submit "Submit", class: "button expand radius" %>
-  </div>
-</div>
-
-  
-<% end %>
+<%= render partial: 'form' %>
