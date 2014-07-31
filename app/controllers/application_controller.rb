@@ -6,8 +6,12 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_patient!
   protected
 
+  # def after_sign_in_path_for(resource)
+  #   patient_root_path
+  # end
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :first_name
-    devise_parameter_sanitizer.for(:sign_up) << :first_name
+    devise_parameter_sanitizer.for(:sign_up) << :last_name
   end
 end

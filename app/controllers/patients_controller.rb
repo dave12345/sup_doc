@@ -2,21 +2,21 @@ class PatientsController < ApplicationController
   def patient_dash
   end
 
-  def new
+  def patient_set_appointment    
   end
 
-  def create
+  def patient_waiting_room
   end
 
-  def show
+  def patient_profile
   end
 
-  def edit
+  def patient_waiting_room
   end
 
-  def update
+  def patient_webchat
   end
 
-  def destroy
+  def patient_edit_profile
   end
 end
