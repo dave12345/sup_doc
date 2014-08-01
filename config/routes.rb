@@ -1,31 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'patient_profiles/index'
-
-  get 'patient_profiles/show'
-
-  get 'patient_profiles/new'
-
-  get 'patient_profiles/create'
-
-  get 'patient_profiles/edit'
-
-  get 'patient_profiles/update'
-
-  get 'patient_profiles/destroy'
-
-  get 'appointments/index'
-
-  get 'appointments/new'
-
-  get 'appointments/show'
-
-  get 'appointments/create'
-
-  get 'appointments/update'
-
-  get 'appointments/destroy'
-
+  # resources :patient_profiles
+  # resources :doctor_profiles
+  resources :appointments
   resources :health_forms
   resources :static_pages
 
@@ -44,7 +21,7 @@ Rails.application.routes.draw do
 
   # root :to => ''
 
-  
+  get 'new_doctor_profile'     => 'doctor_profiles#new'
   # get 'patient_dash'           => 'temp_pages#patient_dash'
   get 'doctor_dash'            => 'doctors#doctor_dash'
   get 'patient_set_appointment'=> 'patients#patient_set_appointment'
