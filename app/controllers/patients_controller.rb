@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :authenticate_patient!
+  before_action :authenticate_patient!, except: [:patient_webchat]
 
   def patient_dash
     @patient = current_patient
@@ -17,6 +17,8 @@ class PatientsController < ApplicationController
   end
 
   def patient_webchat
+    @patient = current_patient
+    @doctor = current_doctor
   end
 
   def patient_edit_profile

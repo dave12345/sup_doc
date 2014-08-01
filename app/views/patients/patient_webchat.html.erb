@@ -13,19 +13,32 @@
 </style>
 
     <script src='js/lib/adapter.js'></script>
-
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
+<div id="container" class="row">
 
-  <video id="localVideo" autoplay muted></video>
-  <video id="remoteVideo" autoplay muted></video>
+  <div id="video">
+    <video id="localVideo" autoplay muted></video>
+    <video id="remoteVideo" autoplay muted></video>
+  </div>
 
-  <div>
+  <div id="buttons">
     <button id="startButton">Start</button>
     <button id="callButton">Call</button>
     <button id="hangupButton">Hang Up</button>
   </div>
+
+
+<%# if @patient? %>
+  <%#= render partial: 'form_for_webchat' %>
+<%# elsif @doctor? %>
+  <%#= @doctor.first_name %>
+<%# end %>
+
+
+</div>  <!--end of container-->
 
 <script>
 var localStream, localPeerConnection, remotePeerConnection;
