@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # resources :patient_profiles
-  # resources :doctor_profiles
+  resources :doctor_profiles
   resources :appointments
   resources :health_forms
   resources :static_pages
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   # root :to => ''
 
-  get 'new_doctor_profile'     => 'doctor_profiles#new'
+
   # get 'patient_dash'           => 'temp_pages#patient_dash'
   get 'doctor_dash'            => 'doctors#doctor_dash'
   get 'patient_set_appointment'=> 'patients#patient_set_appointment'

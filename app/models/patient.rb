@@ -5,4 +5,5 @@ class Patient < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :first_name, :last_name, :presence => true
+  has_many :patient_profiles
 end
