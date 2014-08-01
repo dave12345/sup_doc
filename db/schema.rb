@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801001544) do
+ActiveRecord::Schema.define(version: 20140801005138) do
 
   create_table "appointments", force: true do |t|
     t.datetime "datetime"
@@ -60,6 +60,17 @@ ActiveRecord::Schema.define(version: 20140801001544) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "patient_id"
+  end
+
+  create_table "patient_profiles", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "dob"
+    t.string   "address"
+    t.string   "email"
+    t.integer  "patient_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "patients", force: true do |t|
