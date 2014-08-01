@@ -1,5 +1,6 @@
 class DoctorProfilesController < ApplicationController
   def index
+    @doctor_profiles = DoctorProfile.all
   end
 
   def new
@@ -19,6 +20,9 @@ class DoctorProfilesController < ApplicationController
   end
 
   def destroy
+    @doctor_profile = DoctorProfile.find(params[:id])
+    @doctor_profile.destroy
+    redirect_to doctor_profiles_path
   end
 
   private

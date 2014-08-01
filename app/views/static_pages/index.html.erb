@@ -1,8 +1,47 @@
+<!-- <ul data-orbit>
+  <li data-orbit-slide="headline-1">
+    <img src="../open-arms.jpg" alt="slide 1" />
+  </li>
+  <li data-orbit-slide="headline-2">
+    <img src="../medical-team.jpg" alt="slide 2">
+  </li data-orbit-slide="headline-3">
+  <li>
+    <img src="../globe.jpg" alt="slide 3">
+  </li>
+</ul> -->
+
+<ul class="example-orbit-content" data-orbit>
+  <li data-orbit-slide="headline-1">
+    <div>
+      <h3>Welcome To</h3>
+      <h2>Let's Talk, Doc</h2>
+    </div>
+  </li>
+  <li data-orbit-slide="headline-2">
+    <div>
+      <h3>Speak With A Doctor Anytime,</h3>
+      <h2>From Anywhere</h2>
+    </div>
+  </li>
+  <li data-orbit-slide="headline-3">
+    <div>
+      <h3>Just Sign Up</h3>
+      <h2>And Be Seen</h2>
+    </div>
+  </li>
+</ul>
+
 <div class="row">
   <div class="small-6 columns">
-    <h2>Welcome Home! This is the App. Have fun.</h2>
+    <h2></h2>
+  </div>
+</div><br><br><br><br><br><br><br>
+
+<div class="row">
+  <div class="small-6 columns">
+    <%= link_to "I'm a Patient!", new_patient_session_path, class: "button expand" %>
+  </div>
+  <div class="small-6 columns">
+    <%= link_to "I'm a Doctor!", new_doctor_session_path, class: "button alert right expand" %>
   </div>
 </div>
-
-<%= link_to "I'm a Patient!", new_patient_session_path %><br>
-<br><%= link_to "I'm a Doctor!", new_doctor_session_path %>
