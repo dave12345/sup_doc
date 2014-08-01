@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'appointments/index'
+
+  get 'appointments/new'
+
+  get 'appointments/show'
+
+  get 'appointments/create'
+
+  get 'appointments/update'
+
+  get 'appointments/destroy'
+
   resources :health_forms
   resources :static_pages
 
