@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'patient_profiles/index'
+
+  get 'patient_profiles/show'
+
+  get 'patient_profiles/new'
+
+  get 'patient_profiles/create'
+
+  get 'patient_profiles/edit'
+
+  get 'patient_profiles/update'
+
+  get 'patient_profiles/destroy'
+
   get 'appointments/index'
 
   get 'appointments/new'
