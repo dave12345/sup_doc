@@ -13,34 +13,37 @@
 </style>
 
     <script src='js/lib/adapter.js'></script>
-  <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
-<div id="container" class="row">
+<div id="container">
 
-  <div id="video">
-    <video id="localVideo" autoplay muted></video>
-    <video id="remoteVideo" autoplay muted></video>
-  </div>
+    <div id="video">
+      <video id="localVideo" autoplay></video>
+      <video id="remoteVideo" autoplay></video>
+    </div>
 
-  <div id="buttons">
-    <button id="startButton">Start</button>
-    <button id="callButton">Call</button>
-    <button id="hangupButton">Hang Up</button>
-  </div>
+    <div id="buttons">
+      <button id="startButton">Start</button>
+      <button id="callButton">Call</button>
+      <button id="hangupButton">Hang Up</button>
+    </div>
 
-
-<%# if @patient? %>
-  <%#= render partial: 'form_for_webchat' %>
-<%# elsif @doctor? %>
-  <%#= @doctor.first_name %>
-<%# end %>
-
+    <div id="form">
+        <h3>How are you doing today?</h3>
+        <form>
+            First Name: <input type="text" name="firstname" value="John"></br>
+            Last Name: <input type="text" name="lastname" value="Doe"></br>
+            Birthate: <input type="option" value="01/01/2001">
+        </form>
+    </div>
 
 </div>  <!--end of container-->
 
 <script>
+
+
 var localStream, localPeerConnection, remotePeerConnection;
 
 var localVideo = document.getElementById("localVideo");

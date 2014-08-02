@@ -11,18 +11,21 @@ video {
   -moz-filter: hue-rotate(180deg) saturate(200%);
   -webkit-filter: hue-rotate(180deg) saturate(200%);*/
   display:inline-block;
+  -webkit-filter: drop-shadow(14px 14px 20px black);
 }
 
-#localVideo {
-  border-radius: 5px;
-    border: 3px dotted blue;
-    height: 484px;
-    width: 644px;
-}
+
+// #localVideo {
+//   border-radius: 5px;
+//     border: 3px dotted blue;
+//     height: 484px;
+//     width: 644px;
+  
+// }
 
 #remoteVideo {
-  border-radius: 5px;
-  border: 3px dotted black;
+  // border-radius: 5px;
+  // border: 3px dotted black;
   height: 100px;
   width: 133px;
   margin-left: -138px;
