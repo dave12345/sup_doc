@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140801015159) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "appointments", force: true do |t|
     t.datetime "datetime"
     t.string   "patient_first_name"
@@ -52,8 +55,8 @@ ActiveRecord::Schema.define(version: 20140801015159) do
     t.datetime "updated_at"
   end
 
-  add_index "doctors", ["email"], name: "index_doctors_on_email", unique: true
-  add_index "doctors", ["reset_password_token"], name: "index_doctors_on_reset_password_token", unique: true
+  add_index "doctors", ["email"], name: "index_doctors_on_email", unique: true, using: :btree
+  add_index "doctors", ["reset_password_token"], name: "index_doctors_on_reset_password_token", unique: true, using: :btree
 
   create_table "health_forms", force: true do |t|
     t.string   "first_name"
@@ -103,8 +106,8 @@ ActiveRecord::Schema.define(version: 20140801015159) do
     t.datetime "updated_at"
   end
 
-  add_index "patients", ["email"], name: "index_patients_on_email", unique: true
-  add_index "patients", ["reset_password_token"], name: "index_patients_on_reset_password_token", unique: true
+  add_index "patients", ["email"], name: "index_patients_on_email", unique: true, using: :btree
+  add_index "patients", ["reset_password_token"], name: "index_patients_on_reset_password_token", unique: true, using: :btree
 
   create_table "static_pages", force: true do |t|
     t.datetime "created_at"
