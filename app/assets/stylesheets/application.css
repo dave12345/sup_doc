@@ -26,3 +26,8 @@
   border-left: 1px solid black;
   padding: 5px;
 }
+
+.page-title {
+  border-bottom: 1px solid black;
+  width: 650px;
+}

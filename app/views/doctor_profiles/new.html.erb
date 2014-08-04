@@ -1,0 +1,43 @@
+<%= form_for @doctor_profile, :html => {:multipart => true} do |f| %>
+
+<div class="row">
+  <div class="small-4 columns">
+    <h2 class="page-title">Your Profile</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    First Name:<%= f.text_field :first_name %>
+  </div>
+  <div class="small-4 columns left">
+    <%= f.file_field :avatar %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    Last Name:<%= f.text_field :last_name %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-4 columns">
+    Date Of Birth:<%= f.text_field :dob %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-4 columns">
+    Clinic Address:<%= f.text_field :address %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-4 columns">
+    Email Address:<%= f.text_field :email %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-4 columns">
+    <%= f.submit "Submit", class: "button radius expand"%>
+  </div>
+</div>
+<% end %>

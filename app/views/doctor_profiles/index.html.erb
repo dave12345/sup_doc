@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="small-8 columns">
+    <table>
+      <tr>
+        <th>Doctor Profiles</th>
+        <th>Specialty</th>
+        <th>Location</th>
+        <th>Delete</th>
+      </tr>
+      <% @doctor_profiles.each do |doctor_profile| %>
+      <tr>
+        <td>Dr. <%= doctor_profile.last_name %></td>
+        <td><%= doctor_profile.address %></td>
+        <td><%= doctor_profile.address %></td>
+        <td><%= link_to "Delete", doctor_profile_path(doctor_profile), method: :delete %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

@@ -1,11 +1,27 @@
 Rails.application.routes.draw do
 
-
+  # resources :patient_profiles
+  resources :doctor_profiles
+  resources :appointments
+  resources :health_forms
+  resources :static_pages
 
   devise_for :doctors
-  root 'patients#patient_dash'
   devise_for :patients
-  
+
+  # root :to => 'patients#patient_dash'
+
+  authenticated :patient do
+    root :to => "patients#patient_dash", as: :patient_root
+  end
+
+  authenticated :doctor do
+    root :to => "doctors#doctor_dash", as: :doctor_root
+  end
+
+  # root :to => ''
+
+
   # get 'patient_dash'           => 'temp_pages#patient_dash'
   get 'doctor_dash'            => 'doctors#doctor_dash'
   get 'patient_set_appointment'=> 'patients#patient_set_appointment'
@@ -18,6 +34,9 @@ Rails.application.routes.draw do
   get 'doctor_waiting_room'    => 'doctors#doctor_waiting_room'
   get 'patient_webchat'        => 'patients#patient_webchat'
   get 'doctor_webchat'         => 'doctors#doctor_webchat'
+
+  root 'static_pages#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

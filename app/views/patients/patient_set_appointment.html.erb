@@ -5,10 +5,12 @@
   </div>
 </div>
 
+<%#= @doctor.first_name %>
+
 
 <div class="row">
   <div class="small-4 columns">
-    <%= link_to "Book Appointment", patient_waiting_room_path, class: "tiny button radius" %>
-    <%= link_to "View Profile", doctor_profile_path, class: "tiny button radius" %>
+    <%= link_to "Book Appointment", new_health_form_path, class: "tiny button radius" %>
   </div>
 </div>
+
