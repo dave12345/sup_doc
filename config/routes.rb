@@ -19,6 +19,9 @@ Rails.application.routes.draw do
     root :to => "doctors#doctor_dash", as: :doctor_root
   end
 
+  get 'about'             => 'static_pages#about'
+  get 'contact'           => 'static_pages#contact'
+  get 'careers'           => 'static_pages#careers'
   # root :to => ''
 
 
