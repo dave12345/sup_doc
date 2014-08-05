@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  # resources :patient_profiles
+  resources :patient_profiles
   resources :doctor_profiles
   resources :appointments
   resources :health_forms

@@ -1,2 +1,55 @@
-<h1>PatientProfiles#new</h1>
-<p>Find me in app/views/patient_profiles/new.html.erb</p>
+<%= form_for @patient_profile, :html => {:multipart => true} do |f| %>
+
+
+<div class="row">
+  <div class="small-4 columns">
+    <h2 class="page-title">Your Profile</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    First Name:<%= f.text_field :first_name %>
+  </div>
+  <div class="small-4 columns left">
+    Profile Photo:<%= f.file_field :avatar %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    Last Name:<%= f.text_field :last_name %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    Date of Birth:<%= f.text_field :dob %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    Email:<%= f.text_field :email %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    Home Address:<%= f.text_field :address %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    <%= f.submit "Submit", class: "button radius expand"%>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    <%= link_to "Back", patient_root_path %>
+  </div>
+</div>
+
+<% end %>
