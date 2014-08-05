@@ -15,6 +15,7 @@
     <table>
       <tr>
         <th>Name</th>
+        <th>Photo</th>
         <th>Specialty</th>
         <th>Location</th>
         <th>Schedule</th>
@@ -23,6 +24,7 @@
       <% @doctor_profiles.each do |doctor_profile| %>
       <tr>
         <td>Dr. <%= doctor_profile.last_name %></td>
+        <td><%= doctor_profile.avatar %></td>
         <td><%= doctor_profile.address %></td>
         <td><%= doctor_profile.address %></td>
         <td>Choose a Time</td>
