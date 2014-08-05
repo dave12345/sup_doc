@@ -18,6 +18,7 @@
         <th>Photo</th>
         <th>Specialty</th>
         <th>Location</th>
+        <th>Email</th>
         <th>Schedule</th>
         <th>Delete</th>
       </tr>
@@ -25,8 +26,9 @@
       <tr>
         <td>Dr. <%= doctor_profile.last_name %></td>
         <td><%= doctor_profile.avatar %></td>
+        <td>Specialty</td>
         <td><%= doctor_profile.address %></td>
-        <td><%= doctor_profile.address %></td>
+        <td><%= link_to doctor_profile.email %></td>
         <td>Choose a Time</td>
         <td><%= link_to "Delete", doctor_profile_path(doctor_profile), method: :delete %></td>
       </tr>
