@@ -1,10 +1,23 @@
 <div class="row">
+  <div class="small-4 columns">
+    <h2>Find A Doctor</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    <p><%= select_tag "Filter By Availability", prompt:"Filter By Availabity" %></p>
+  </div>
+</div>
+
+<div class="row">
   <div class="small-8 columns">
     <table>
       <tr>
-        <th>Doctor Profiles</th>
+        <th>Name</th>
         <th>Specialty</th>
         <th>Location</th>
+        <th>Schedule</th>
         <th>Delete</th>
       </tr>
       <% @doctor_profiles.each do |doctor_profile| %>
@@ -12,6 +25,7 @@
         <td>Dr. <%= doctor_profile.last_name %></td>
         <td><%= doctor_profile.address %></td>
         <td><%= doctor_profile.address %></td>
+        <td>Choose a Time</td>
         <td><%= link_to "Delete", doctor_profile_path(doctor_profile), method: :delete %></td>
       </tr>
       <% end %>
