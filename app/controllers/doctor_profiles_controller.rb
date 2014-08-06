@@ -17,6 +17,7 @@ class DoctorProfilesController < ApplicationController
   end
 
   def show
+    @doctor_profile = DoctorProfile.find(params[:id])
   end
 
   def destroy

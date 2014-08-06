@@ -1,2 +1,19 @@
-<h1>DoctorProfiles#show</h1>
-<p>Find me in app/views/doctor_profiles/show.html.erb</p>
+<div class="row">
+  <div class="small-4 columns">
+    <h2>Doctor Profile</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="small-4 columns">
+    <p>PHOTO</p>
+    <p>Dr. <%= @doctor_profile.first_name %> <%= @doctor_profile.last_name %></p>
+    <p><%= @doctor_profile.address %></p>
+    <p>BIO.....(add column to schema. Along with specialty column.  Epsilem upsom, these are words to especially epsilom describe di. What college and epso tworn thousan times.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-4 columns">
+    <%= link_to "Back", doctor_profiles_path %>
+  </div>
+</div>
