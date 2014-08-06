@@ -15,7 +15,9 @@
  *= require foundation_and_overrides
 
  */
- 
+ body {
+  background-color: lightgrey;
+ }
  #nav-bar {
   list-style-type: none;
   font-size: 14px;
