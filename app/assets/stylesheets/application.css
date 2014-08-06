@@ -33,3 +33,18 @@
   border-bottom: 1px solid black;
   width: 650px;
 }
+
+#footer {
+  background-color: lightblue;
+  float:bottom;
+  position: relative;
+}
+
+#footer ul {
+  padding: 6px;
+}
+
+#footer li {
+  display: inline-block;
+  margin-left: 20px;
+}
